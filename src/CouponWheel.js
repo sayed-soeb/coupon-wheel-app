@@ -15,15 +15,23 @@ const CouponWheel = () => {
         setTimeout(() => {
           setSpinning(false);
           setSpinCount(1);
-          alert('Try again');
         }, 2000);
+        if (spinCount ===0 && !spinning){
+          setTimeout(() => {
+            alert('Try again,Best of luck');
+          }, 2150);
+        }
       }
       // Second spin - Display result
       else if (spinCount === 1) {
         setTimeout(() => {
           setSpinning(false);
-          alert('Congratulations! You won a gift card!');
-        }, 3000);
+        }, 3000);  
+        if (spinCount ===1 && !spinning){
+          setTimeout(() => {
+            alert('Congratulation,You have win a coupon.');
+          }, 3150);
+        }
       }
     }
   };
